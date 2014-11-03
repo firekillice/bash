@@ -5,12 +5,7 @@ then
     rm $filename
 fi
 
-itemid_array=(
-20141028/item_obtain.csv
-20141029/item_obtain.csv
-)
-
-for logfilename in `echo ${itemid_array[@]}`
+for logfilename in `cat filename.list`
 do
     if [ ! -f $logfilename ]
     then
