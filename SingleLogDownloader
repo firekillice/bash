@@ -1,0 +1,18 @@
+#############################################################
+date=20141027
+filename=buddy_obtain.csv
+ipaddr='182.254.179.191'
+areaID=4
+#############################################################
+#for ipaddr in `echo ${GAME_AREA_IP_ADDR[@]}`
+dirname=area_$areaID
+if [ ! -d $dirname ]
+then
+    mkdir $dirname
+fi
+if [ ! -d $dirname/$date ]
+then
+    mkdir $dirname/$date
+fi
+
+scp -P 36000 -i ~/.ssh/key.file linghegu@$ipaddr:/data/gamelogs/server1/ZoneServer/logs/$date/$filename ./$dirname/$date
