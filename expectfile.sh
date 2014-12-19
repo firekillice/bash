@@ -17,3 +17,6 @@ expect {
 }
 expect "100%"
 expect eof
+
+
+# scp -P 36000 -i ~/.ssh/key.file linghegu@203.195.155.241:/data/gamelogs/core/zone.tar.gz .
